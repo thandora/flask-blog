@@ -122,8 +122,8 @@ class Comment(db.Model):
 
 
 # # Run once. Create tables in database
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
 
 
 # # # # Routes # # # #
@@ -290,4 +290,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
