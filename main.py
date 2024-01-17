@@ -17,6 +17,7 @@ from functools import wraps
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 import os
+
 # from dotenv import load_dotenv
 # load_dotenv(".env")
 
@@ -34,7 +35,7 @@ login_manager.init_app(app)
 
 # CONNECT TO DB
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("POSTGRES_URL").replace(
-    "postgres", "postgresql"
+    "postgres", "postgresql", 1
 )
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
