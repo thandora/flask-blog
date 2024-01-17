@@ -17,10 +17,10 @@ from functools import wraps
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
+# load_dotenv(".env")
 
 # This is a test email for "admin".
-load_dotenv(".env")
 ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL")
 
 
